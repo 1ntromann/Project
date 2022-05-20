@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model deployment</title>
+    <style>
+      body {
+        /* background-color: rgb(212, 115, 175); */
+        display: flex;
+        /* height: 100vh; */
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-image: url("https://wallpaperaccess.com/full/1728957.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        align-items: center;
+        justify-content: center;
+      }
+      input {
+        width: 35vw;
+        height: 2em;
+        margin: 0.5em 0.5em;
+        border: none;
+        border-radius: 1.5em;
+        text-align: center;
+        /* background-color: rgb(223, 197, 163); */
+      }
+      button {
+        background-color: #48bfcd;
+        border: none;
+        /* font-size: 5px; */
+        font-weight: bold;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        /* text-decoration: none; */
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 2em;
+        margin-top: 1em;
+      }
+      .main {
+        margin-left: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        color: beige;
+        display: block;
+      }
+      h2 {
+        color: beige;
+      }
+      h3 {
+        color: rgb(212, 143, 212);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Model prediction interface</h1>
+    <h2>Enter the following values to predict</h2>
+
+    <form action="/predict" method="POST">
+      <div class="main">
+        <div class="div1">
+          <input type="number" name="snr" placeholder="senior citizen" />
+          <input type="number" name="mon" placeholder="monthly charges" />
+          <input type="number" name="total" placeholder="total charges" />
+          <input type="number" name="gndrMale" placeholder="gender" />
+          <input type="number" name="partnerY" placeholder="partner" />
+          <input type="number" name="depenY" placeholder="dependent" />
+          <input type="number" name="phoneSer" placeholder="phone services" />
+          <input
+            type="number"
+            name="multiPhoneser"
+            placeholder="multiple lines phone services"
+          />
+          <input
+            type="number"
+            name="multipleLine"
+            placeholder="multiple lines"
+          />
+          <input
+            type="number"
+            name="internetFibre"
+            placeholder="internet fibre optics"
+          />
+          <input
+            type="number"
+            name="internetSer"
+            placeholder="internet services"
+          />
+          <input
+            type="number"
+            name="onlineInter"
+            placeholder="online Internet security"
+          />
+          <input
+            type="number"
+            name="onlineSecur"
+            placeholder="online security"
+          />
+          <input
+            type="number"
+            name="onlineBackInt"
+            placeholder="online internet backup"
+          />
+          <input type="number" name="onlineBack" placeholder="online backup" />
+        </div>
+
+        <div class="div2">
+          <input
+            type="number"
+            name="deviceProInter"
+            placeholder="device protection internet"
+          />
+          <input
+            type="number"
+            name="devicePro"
+            placeholder="device protection"
+          />
+          <input
+            type="number"
+            name="techSuppInter"
+            placeholder="technical support internet"
+          />
+          <input
+            type="number"
+            name="techSupp"
+            placeholder="technical support"
+          />
+          <input
+            type="number"
+            name="streamTVInter"
+            placeholder="streaming TV internet"
+          />
+          <input
+            type="number"
+            name="streamTV"
+            placeholder="streaming support"
+          />
+          <input
+            type="number"
+            name="streamMovieInter"
+            placeholder="streaming movie internet"
+          />
+          <input
+            type="number"
+            name="streamMovie"
+            placeholder="streaming movie support"
+          />
+          <input
+            type="number"
+            name="contractOne"
+            placeholder="one year contract"
+          />
+          <input
+            type="number"
+            name="contractTwo"
+            placeholder="two year contract"
+          />
+          <input
+            type="number"
+            name="paperLessBill"
+            placeholder="paper less billing"
+          />
+          <input
+            type="number"
+            name="paymentCard"
+            placeholder="Credit card payment"
+          />
+          <input
+            type="number"
+            name="paymentElec"
+            placeholder="Electronic payment"
+          />
+          <input type="number" name="paymentMail" placeholder="mail payment" />
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <h3>{{prediction_text}}</h3>
+  </body>
+</html>
